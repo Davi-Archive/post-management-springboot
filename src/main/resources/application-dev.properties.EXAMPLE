@@ -1,0 +1,2 @@
+spring.data.mongodb.uri=<<<<<REPLACE WITH YOUR MONGO URI>>>>
+spring.data.mongodb.database=spring-boot-blog <<<<< YOUR DATABASE NAME >>>>>>
