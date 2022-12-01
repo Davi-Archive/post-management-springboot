@@ -1,5 +1,7 @@
 package com.api.dto;
 
+import java.util.Optional;
+
 import com.api.domain.User;
 
 public class UserDTO {
@@ -17,6 +19,7 @@ public class UserDTO {
 		name = obj.getName();
 		email = obj.getEmail();
 	}
+	
 
 	public String getId() {
 		return id;
