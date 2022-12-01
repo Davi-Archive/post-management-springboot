@@ -1,5 +1,6 @@
 package com.api.services;
 
+import java.util.List;
 import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -14,13 +15,17 @@ public class PostService {
 
 	@Autowired
 	private PostRepository postRepository;
-	
+
 	public Post findById(String id) {
 		Optional<Post> post = postRepository.findById(id);
 		if (post == null) {
-			throw new ObjectNotFoundException("Objeto não encontrado");	
+			throw new ObjectNotFoundException("Objeto não encontrado");
 		}
 		return post.get();
 	}
-	
+
+	public List<Post> findByTitle(String text) {
+		return postRepository.findByTitleContainingIgnoreCase(text);
+	}
+
 }
