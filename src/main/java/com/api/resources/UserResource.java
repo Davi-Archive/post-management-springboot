@@ -73,5 +73,7 @@ public class UserResource {
 		User obj = service.findById(id);
 		return ResponseEntity.status(200).body(obj.getPosts());
 	}
+	
+	
 
 }
