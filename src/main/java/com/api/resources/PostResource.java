@@ -9,7 +9,6 @@ import org.springframework.web.bind.annotation.RestController;
 
 import com.api.domain.Post;
 import com.api.services.PostService;
-import com.api.services.UserService;
 
 @RestController
 @RequestMapping(value = "/posts")
