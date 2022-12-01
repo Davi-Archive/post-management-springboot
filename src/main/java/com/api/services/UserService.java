@@ -21,13 +21,17 @@ public class UserService {
 		return repository.findAll();
 	}
 
-	public void create(User user) {
-		repository.save(user);
+	public User insert(User user) {
+		return repository.insert(user);
 	}
 
 	public User findById(String id) {
 		Optional<User> user = repository.findById(id);
 		return user.orElseThrow(() -> new ObjectNotFoundException("Objeto não encontrado"));
+	}
+	
+	public User fromDTO(UserDTO objDto) {
+		return new User(objDto.getId(),objDto.getName(),objDto.getEmail());
 	}
 
 }
