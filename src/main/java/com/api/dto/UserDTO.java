@@ -1,7 +1,5 @@
 package com.api.dto;
 
-import java.util.Optional;
-
 import com.api.domain.User;
 
 public class UserDTO {
